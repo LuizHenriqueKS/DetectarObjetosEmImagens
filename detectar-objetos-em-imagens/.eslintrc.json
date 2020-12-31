@@ -1,0 +1,30 @@
+{
+  "env": {
+    "browser": true,
+    "es2020": true
+  },
+  "extends": [
+    "plugin:vue/essential",
+    "standard"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 11,
+    "parser": "@typescript-eslint/parser",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "vue",
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "semi": [
+      "error",
+      "always"
+    ],
+    "space-before-function-paren": "off",
+    "quotes": [
+      2,
+      "prefer-single"
+    ]
+  }
+}
