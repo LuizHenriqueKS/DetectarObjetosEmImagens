@@ -69,8 +69,10 @@ export default class HelloWorld extends Vue {
   border-right: 1px solid gray;
 }
 .layout__buttons {
-  padding: 8px;
   text-align: right;
+}
+.layout__buttons > * {
+  margin: 8px 8px 8px 0px;
 }
 .layout__view__title {
   padding: 8px;
