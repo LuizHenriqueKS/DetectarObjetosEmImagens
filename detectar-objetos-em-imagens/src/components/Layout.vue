@@ -2,7 +2,7 @@
   <div class="layout">
     <div class="layout__title"><slot name="title" /></div>
     <div class="layout__content">
-      <div class="layout__view-1">
+      <div class="layout__view-1 layout__view">
         <div class="layout__view-1__title layout__view__title">
           <slot name="view1-title" />
         </div>
@@ -10,7 +10,7 @@
           <slot name="view1" />
         </div>
       </div>
-      <div class="layout__view-2">
+      <div class="layout__view-2 layout__view">
         <div class="layout__view-2__title layout__view__title">
           <slot name="view2-title" />
         </div>
@@ -42,13 +42,18 @@ export default class HelloWorld extends Vue {
   height: 80%;
   display: flex;
   flex-direction: column;
+  margin: 10px;
+  padding: 0px;
   box-sizing: content-box;
+  overflow: hidden;
 }
 .layout__title {
-  padding: 4px 8px;
+  padding: 12px 12px 12px 12px;
   font-size: 1.1em;
   background-color: #1976d2;
   color: white;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
   /*text-transform: uppercase;*/
 }
 .layout__content {
@@ -68,15 +73,19 @@ export default class HelloWorld extends Vue {
   text-align: right;
 }
 .layout__view__title {
-  background: rgba(0, 0, 0, 0.2);
-  padding: 4px;
+  padding: 8px;
   text-align: center;
 }
 .layout__view__content {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  width: 100%;
+  padding: 8px;
+  flex: 1;
+}
+.layout__view {
+  min-width: 350px;
+  display: flex;
+  flex-direction: column;
 }
 </style>
